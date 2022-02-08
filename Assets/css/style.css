@@ -1,0 +1,38 @@
+
+/* Color scheme variables selected from http://khroma.co/generator/ */
+:root {
+    /* Dark Mode Colors */
+    --astronaut: #233168;
+    --powder: #AFDEE5;
+    /* Light Mode Colors */
+    --junglemist: #BBCDD4;
+    --bay: #2D3F8F;
+}
+
+* {
+    /* Times New Roman font family */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Sets Header alignment properties */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav {
+    
+}
+
+body {
+
+}
+
+aside {
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
