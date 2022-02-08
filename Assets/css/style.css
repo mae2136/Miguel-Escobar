@@ -12,6 +12,8 @@
 * {
     /* Times New Roman font family */
     font-family: 'Times New Roman', Times, serif;
+    color: var(--bay);
+    background-color: var(--junglemist);
 }
 
 /* Sets Header alignment properties */
@@ -20,19 +22,23 @@ header {
     justify-content: space-between;
 }
 
-header nav {
-    
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 body {
-
+    display: block;
 }
 
 aside {
-
+    display: block;
 }
 
 footer {
-    display: flex;
+    display: inline-flex;
     justify-content: space-around;
 }
