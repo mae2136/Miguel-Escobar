@@ -3,42 +3,116 @@
 :root {
     /* Dark Mode Colors */
     --astronaut: #233168;
-    --powder: #AFDEE5;
+    --powder: #2cc2da;
     /* Light Mode Colors */
-    --junglemist: #BBCDD4;
-    --bay: #2D3F8F;
+    --junglemist: #d0e0e7;
+    --bay: #213bad;
 }
 
 * {
     /* Times New Roman font family */
     font-family: 'Times New Roman', Times, serif;
-    color: var(--bay);
-    background-color: var(--junglemist);
 }
 
-/* Sets Header alignment properties */
-header {
+/* Sets Header and footer alignment properties, colors, and padding */
+header, footer {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    background: linear-gradient(var(--astronaut), var(--bay));
+    color: var(--junglemist);
+    padding: 0.5em;
+    width: 100%;
+    align-items: center;
 }
 
+/* Sets header spacing and color gradient */
+header {
+    justify-content: space-between;
+    background: linear-gradient(var(--astronaut), var(--bay));
+}
+
+/* Sets text color of various selectors */
+h1, h5, a, li, ul {
+    color: var(--junglemist);
+}
+
+/* Formats all list elements */
+li {
+    display: inline;
+    padding-right: 1.5%;
+}
+
+/* Formatting and layout for title name/header */
+h1 {
+    font-size: 3.5em;
+    margin-left: 5%;
+}
+
+/* Formatting and layout for header list */
+header ul {
+    font-size: 1.5em;
+    flex-basis: 40%;
+}
+
+/* Removes underline from links */
 a {
     text-decoration: none;
 }
 
+/* Changes colors of links when hovering over them */
 a:hover {
-    text-decoration: underline;
+    color: var(--powder);
 }
 
+/* Sets body container colors and flex properties */
 body {
-    display: block;
-}
-
-aside {
-    display: block;
-}
-
-footer {
     display: flex;
+    flex-wrap: wrap;
+    background:  linear-gradient(var(--astronaut), var(--junglemist));
+    color: darkblue;
+}
+
+/* Sets main container layout */
+main {
+    flex-basis: 75%;
+    margin: 1%;
+}
+
+/* General formatting for aside container */
+aside {
+    text-align: center;
+    flex-basis: 20%;
+    margin: 1%;
+    flex-direction: column;
+    color: var(--junglemist);
+    background: linear-gradient(var(--astronaut), var(--bay));
+    border-radius: 0.5em;
+}
+
+/* Formats article main header */
+aside h3 {
+    font-size: 1.5em;
+}
+
+/* Adds border and radius around images */
+article img {
+    border: 2px solid orange;
+    border-radius: 0.5em;
+}
+
+/* Sets width of profile picture */
+#profilepic {
+    width: 25%;
+}
+
+/* Increases image size of project images */
+.project:hover {
+    transform: scale(1.5, 1.5);
+    transition-duration: 0.5s;
+}
+
+/* Footer alignment and text size */
+footer {
     justify-content: space-around;
+    font-size: 1.25em;
 }

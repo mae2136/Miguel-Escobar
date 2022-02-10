@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escobar Main Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="Assests/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./Assets/favicon.ico"> <!-- Favicon made at https://www.favicon.cc/ -->
     <link rel="stylesheet" href="./Assets/css/reset.css">
     <link rel="stylesheet" href="./Assets/css/style.css">
 </head>
+
 <header>
     <h1>Miguel Escobar</h1>
-    <nav>
-        <a href="https://google.com">Portfolio</a>
-        <a href="https://github.com/mae2136">Github</a>
-        <a href="https://www.linkedin.com/in/miguel-a-escobar/">Resume</a>
-        <a href="https://google.com">Contact Me</a>
-    </nav>
+    <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="https://github.com/mae2136">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/miguel-a-escobar/">Resume</a></li>
+        <li><a href="#contactme">Contact Me</a></li>
+    <ul>
 </header>
+
 <body>
     <main>
         <article>
-            <img src="./Assests/George.ico" alt="Miguel Escobar"/>
-            <h2>About Me</h2>
-            <p>Raid name worse wars unprepared Bard rules examine fade company? Bert silly twisted coins? Laid squealing correctly venerable month crooks victorious Oakenshield? Attacked going breaking drink invitations accounted Woodland stepped inbreds ambition crevice bloodline. Wager smells Saruman's. Loveliest here distant Simbelmynë shield unlost unto devils worn done alike jewel. These Théodred's known box! Tightening happen awaits sweeps permitted supposed galumphing Arwen tobacco wise lower joined. The dark fire will not avail you, flame of Udun!</p>
-            <p>Many that live deserve death. Some that die deserve life. Many Radagast the Brown thick marshaling regained! Dinner ai-'d load cake closing? Well-earned Arkenstone beasts approve salted triumph shaft 2000. Tauriel seeing born unarmed. Land vengeance curtain Glóin instead gardeners? Limited nearest dwarf tomatoes curse sealed dark troublemaker Dwarvish rout! Simple questions peasants thunder Gondor!</p>
+            <img id="profilepic" src="./Assets/IOP_1331.jpg" alt="Miguel Escobar" />
+            <section id="aboutme">
+                <h2>About Me</h2>
+                <p>Welcome to my website!</p>
+                <p>My name is Miguel Escobar, and I am an aspiring Web Developer. I am currently learning how to become a web developer at Northwestern University</p>
+                <p>While doing that, I work full time at Medline, LP as a Sr. Engineer in the Research and Development department, helping to bring medical devices to market.</p>
+            </section>
         </article>
         <article>
-            <img src="./Assests/George.ico" alt="Miguel Escobar"/>
-            <h2>Latest Project</h2>
-            <p>
-                <h3>Portfolio Page</h3>
-                Many that live deserve death. Some that die deserve life. Many Radagast the Brown thick marshaling regained! Dinner ai-'d load cake closing? Well-earned Arkenstone beasts approve salted triumph shaft 2000. Tauriel seeing born unarmed. Land vengeance curtain Glóin instead gardeners? Limited nearest dwarf tomatoes curse sealed dark troublemaker Dwarvish rout! Simple questions peasants thunder Gondor!
-            </p>
+            <img src="./Assets/George.ico" alt="Miguel's Portfolio" />
+            <section id="newproject">
+                <h2>Latest Project</h2>
+                <p><h3>Portfolio Page</h3>
+                Many that live deserve death. Some that die deserve life. Many Radagast the Brown thick marshaling
+                regained! Dinner ai-'d load cake closing? Well-earned Arkenstone beasts approve salted triumph shaft
+                2000. Tauriel seeing born unarmed. Land vengeance curtain Glóin instead gardeners? Limited nearest dwarf
+                tomatoes curse sealed dark troublemaker Dwarvish rout! Simple questions peasants thunder Gondor!
+                </p>
+            </section>
         </article>
     </main>
-    <aside>
+    <aside id="portfolio">
         <h3>Projects</h3>
         <article>
             <h4>Project 1</h4>
-            <img src="./Assests/George.ico" alt="Project 1"/>
+            <section class="project">
+                <img src="./Assets/George.ico" alt="Project 1" />
+            </section>
         </article>
         <article>
             <h4>Project 2</h4>
-            <img src="./Assests/George.ico" alt="Project 2"/>
+            <section class="project">
+                <img src="./Assets/George.ico" alt="Project 2" />
+            </section>
         </article>
         <article>
             <h4>Project 3</h4>
-            <img src="./Assests/George.ico" alt="Project 3"/>
+            <section class="project">
+                <img src="./Assets/George.ico" alt="Project 3" />
+            </section>
         </article>
     </aside>
 </body>
-<footer>
-    <h2>Contact Me</h2>
-    <nav>
-        <a href="mailto:random@random.com">Email</a>
-        <a href="https://www.linkedin.com/in/miguel-a-escobar/">Resume</a>
-    </nav>
+<footer id="contactme">
+    <h5>Contact Me</h2>
+        <ul>
+            <li><a href="mailto:mae2136@columbia.edu">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/miguel-a-escobar/">Resume</a></li>
+        </ul>
 </footer>
