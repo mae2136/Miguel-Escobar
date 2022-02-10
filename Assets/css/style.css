@@ -86,18 +86,48 @@ aside {
     flex-direction: column;
     color: var(--junglemist);
     background: linear-gradient(var(--astronaut), var(--bay));
-    border-radius: 0.5em;
+    border-radius: 1em;
+}
+
+aside article {
+    position: relative;
 }
 
 /* Formats article main header */
 aside h3 {
     font-size: 1.5em;
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+}
+
+/* Project header styling */
+h4 {
+    font-size: 1.2em;
+    font-style: italic;
+    text-shadow: black 1px 1px;
+    margin-bottom: 0.2em;
 }
 
 /* Adds border and radius around images */
 article img {
     border: 2px solid orange;
-    border-radius: 0.5em;
+    border-radius: 1em;
+}
+
+/* Aside image layout */
+.project img {
+    width: 75%;
+    margin-bottom: 20%;
+}
+
+/* Image text positioning & styling */
+h6 {
+    color: black;
+    background: yellow;
+    border-radius: 0.5em 0 0 0;
+    text-align: left;
+    position: absolute;
+    left: 15%;
 }
 
 /* Sets width of profile picture */
@@ -107,7 +137,7 @@ article img {
 
 /* Increases image size of project images */
 .project:hover {
-    transform: scale(1.5, 1.5);
+    transform: scale(1.25, 1.25);
     transition-duration: 0.5s;
 }
 
