@@ -1,6 +1,7 @@
 
 /* Color scheme variables selected from http://khroma.co/generator/ */
 :root {
+    --black: black;    
     /* Dark Mode Colors */
     --astronaut: #233168;
     --powder: #2cc2da;
@@ -68,8 +69,8 @@ a:hover {
 body {
     display: flex;
     flex-wrap: wrap;
-    background:  linear-gradient(var(--astronaut), var(--junglemist));
-    color: rgb(71, 48, 5);
+    background-image: url(./background.jpg); /* Image of my dog, George */
+    background-position: center;
 }
 
 /* Sets main container layout */
@@ -81,16 +82,17 @@ main {
 /* Main container box formatting */
 #aboutme, #newproject {
     margin: 5%;
-    background: rgb(122, 122, 122);
+    background: linear-gradient(var(--astronaut), var(--bay));
+    color: var(--junglemist);
     border-style: double;
     border-radius: 0 1em 1em 0;
     padding: 1em;
 }
 
-/* Formats picture  */
+/* Section layout  */
 #aboutme section, #newproject section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 0.5em 0 0 1em;
 }
 
@@ -104,13 +106,15 @@ main {
 /* Provides spacing for text in main containers */
 .information p{
     margin-bottom: 1em;
+    font-size: 1.25em;
 }
 
-/* Main article header and underline */
+/* Main article header formatting & underline */
 h2 {
-    width: 75%;
-    border-bottom: 3px solid orange;
-    margin-bottom: 0.5%;
+    font-size: 2.5em;
+    width: 50%;
+    border-bottom: 3px solid var(--junglemist);
+    margin: 0 0 0.5% 1%;
 }
 
 /* General formatting for aside container */
@@ -122,9 +126,10 @@ aside {
     color: var(--junglemist);
     background: linear-gradient(var(--astronaut), var(--bay));
     border-style: double;
-    border-radius: 0 1em 1em 0;
+    border-radius: 1em;
 }
 
+/* Layout and flex information for aside articles */
 aside article {
     position: relative;
     flex: 0.5 2;
@@ -132,48 +137,59 @@ aside article {
 
 /* Formats article main header */
 aside h3 {
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: bold;
     margin-bottom: 0.5em;
     text-decoration: underline;
 }
 
 /* Project header styling */
 h4 {
-    font-size: 1.2em;
+    font-size: 1.25em;
     font-style: italic;
-    text-shadow: black 1px 1px;
+    text-shadow: var(--black) 1px 1px;
     margin-bottom: 0.2em;
 }
 
-/* Adds border and radius around images */
-article img {
-    border: 3px solid black;
+/* General image border styling */
+img {
+    border: 3px solid var(--black);
     border-radius: 0 1em 1em 0;
-    width: 20%;
 }
 
-article section {
-    flex: 2 2 80%
+/* Main section image formatting */
+main img {
+    max-width: 30%;
+    height: auto
 }
 
-/* Aside image layout */
+/* Adds border and radius around aside images */
 .project img {
-    width: 75%;
+    max-width: 60%;
+    height: auto;
     margin-bottom: 20%;
+}
+
+/* Flex properties for information section */
+.information {
+    flex: 0.5 2 75%
 }
 
 /* Image text positioning & styling */
 h6 {
-    color: black;
-    background: yellow;
+    color: var(--junglemist);
+    background: linear-gradient(var(--astronaut), var(--bay));
+    font-size: 1.25em;
+    border: 0.5px solid var(--black);
     text-align: left;
     position: absolute;
-    left: 14%;
+    left: 30%;
+    flex-shrink: 3;
 }
 
-/* Increases image size of project images */
-.project:hover {
-    transform: scale(1.25, 1.25);
+/* Increases image size of main project image when hovering*/
+#lateimg:hover {
+    transform: scale(1.4, 1.4);
     transition-duration: 0.5s;
 }
 
@@ -181,4 +197,43 @@ h6 {
 footer {
     justify-content: space-around;
     font-size: 1.25em;
+    opacity: 0.9;
+}
+
+/* Responsive layout information */
+@media screen and (max-width: 980px) {
+    /* Pushes Aside below Main Container */
+    main {
+        flex-basis: 100%;
+    }
+    /*  */
+    aside {
+        flex-basis: 100%;
+        flex-direction: row;
+        margin: 5%;
+    }
+
+    aside article{
+        flex-basis: 33%;
+        max-width: 33%;
+    }
+    
+    /* Removes image text */
+    h6 {
+        display: none;  
+    }
+}
+
+/* Responsive layout for under 440px */
+@media screen and (max-width: 440px) {
+
+    /* Reformats list styles */
+    ul li {
+        display: block;
+        margin: 0.5em 0;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
 }
