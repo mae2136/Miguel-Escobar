@@ -32,7 +32,7 @@ header {
 }
 
 /* Sets text color of various selectors */
-h1, h5, a, li, ul {
+h1, h3, a, li, ul {
     color: var(--junglemist);
 }
 
@@ -69,7 +69,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     background:  linear-gradient(var(--astronaut), var(--junglemist));
-    color: darkblue;
+    color: rgb(71, 48, 5);
 }
 
 /* Sets main container layout */
@@ -78,19 +78,56 @@ main {
     margin: 1%;
 }
 
+/* Main container box formatting */
+#aboutme, #newproject {
+    margin: 5%;
+    background: rgb(122, 122, 122);
+    border-style: double;
+    border-radius: 0 1em 1em 0;
+    padding: 1em;
+}
+
+/* Formats picture  */
+#aboutme section, #newproject section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em 0 0 1em;
+}
+
+/* Aligns information text in main containers */
+.information {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* Provides spacing for text in main containers */
+.information p{
+    margin-bottom: 1em;
+}
+
+/* Main article header and underline */
+h2 {
+    width: 75%;
+    border-bottom: 3px solid orange;
+    margin-bottom: 0.5%;
+}
+
 /* General formatting for aside container */
 aside {
     text-align: center;
     flex-basis: 20%;
-    margin: 1%;
+    margin: 1% 1% 1.5% 1%;
     flex-direction: column;
     color: var(--junglemist);
     background: linear-gradient(var(--astronaut), var(--bay));
-    border-radius: 1em;
+    border-style: double;
+    border-radius: 0 1em 1em 0;
 }
 
 aside article {
     position: relative;
+    flex: 0.5 2;
 }
 
 /* Formats article main header */
@@ -110,8 +147,13 @@ h4 {
 
 /* Adds border and radius around images */
 article img {
-    border: 2px solid orange;
-    border-radius: 1em;
+    border: 3px solid black;
+    border-radius: 0 1em 1em 0;
+    width: 20%;
+}
+
+article section {
+    flex: 2 2 80%
 }
 
 /* Aside image layout */
@@ -124,15 +166,9 @@ article img {
 h6 {
     color: black;
     background: yellow;
-    border-radius: 0.5em 0 0 0;
     text-align: left;
     position: absolute;
-    left: 15%;
-}
-
-/* Sets width of profile picture */
-#profilepic {
-    width: 25%;
+    left: 14%;
 }
 
 /* Increases image size of project images */
