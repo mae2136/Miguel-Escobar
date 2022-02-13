@@ -169,6 +169,7 @@ main img {
     height: auto
 }
 
+/* Latest Project image formatting */
 a img {
     max-width: 100%;
     height: auto;
@@ -212,39 +213,59 @@ footer {
 }
 
 /* Responsive layout information */
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 980px) {    
+    /* Realign headers text */
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Realign h2 */
+    h2 {
+        text-align: center;
+        width: auto;
+    }
+    
     /* Pushes Aside below Main Container */
     main {
         flex-basis: 100%;
     }
-    /*  */
+
+    /* Brings aside container under main container */
     aside {
         flex-basis: 100%;
-        flex-direction: row;
         margin: 5%;
     }
 
-    aside article{
-        flex-basis: 33%;
-        max-width: 33%;
+    /* Formats aside pictures */
+    .project img {
+        margin: 1em 0;
+        height: 200px;
+        width: auto;
     }
-    
+
     /* Removes image text */
     h6 {
         display: none;  
     }
+
+    /* Reformats list styles */  
+    ul li {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em 0;
+    }
 }
 
-/* Responsive layout for under 440px */
-@media screen and (max-width: 440px) {
-
-    /* Reformats list styles */
-    ul li {
-        display: block;
-        margin: 0.5em 0;
-        width: 100%;
-        justify-content: center;
-        text-align: center;
+/* Responsive layout for under 600px */
+@media screen and (max-width: 600px) {
+    /* Moves main container pictures above text  */
+    #aboutme section, #newproject section {
+        flex-wrap: wrap;
     }
-    
+    /* Moves pictures to center */
+    .picInfo {
+        justify-content: center;
+    }
+
 }
