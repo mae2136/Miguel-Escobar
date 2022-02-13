@@ -103,10 +103,15 @@ main {
     flex-direction: column;
 }
 
+/* Makes Latest project image link take up 30% of container*/
+#newproject a {
+    max-width: 30%;
+}
+
 /* Provides spacing for text in main containers */
 .information p{
     margin-bottom: 1em;
-    font-size: 1.25em;
+    font-size: 1.3em;
 }
 
 /* Main article header formatting & underline */
@@ -149,6 +154,7 @@ h4 {
     font-style: italic;
     text-shadow: var(--black) 1px 1px;
     margin-bottom: 0.2em;
+    background-color: var(--black);
 }
 
 /* General image border styling */
@@ -161,6 +167,11 @@ img {
 main img {
     max-width: 30%;
     height: auto
+}
+
+a img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Adds border and radius around aside images */
@@ -178,12 +189,12 @@ main img {
 /* Image text positioning & styling */
 h6 {
     color: var(--junglemist);
-    background: linear-gradient(var(--astronaut), var(--bay));
-    font-size: 1.25em;
+    background: var(--black);
+    font-style: italic;
     border: 0.5px solid var(--black);
     text-align: left;
     position: absolute;
-    left: 30%;
+    left: 35%;
     flex-shrink: 3;
 }
 
