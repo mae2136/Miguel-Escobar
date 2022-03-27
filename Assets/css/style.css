@@ -175,6 +175,12 @@ a img {
     height: auto;
 }
 
+#profilepic {
+    max-width: 40%;
+    height: auto;
+    margin-bottom: 20%;
+}
+
 /* Adds border and radius around aside images */
 .project img {
     max-width: 60%;
