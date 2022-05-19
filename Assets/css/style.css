@@ -1,7 +1,6 @@
-
 /* Color scheme variables selected from http://khroma.co/generator/ */
 :root {
-    --black: black;    
+    --black: black;
     /* Dark Mode Colors */
     --astronaut: #233168;
     --powder: #2cc2da;
@@ -16,9 +15,11 @@
 }
 
 /* Sets Header and footer alignment properties, colors, and padding */
-header, footer {
+header,
+footer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     background: linear-gradient(var(--astronaut), var(--bay));
     color: var(--junglemist);
     padding: 0.5em;
@@ -28,12 +29,15 @@ header, footer {
 
 /* Sets header spacing and color gradient */
 header {
-    justify-content: space-between;
     background: linear-gradient(var(--astronaut), var(--bay));
 }
 
 /* Sets text color of various selectors */
-h1, h3, a, li, ul {
+h1,
+h3,
+a,
+li,
+ul {
     color: var(--junglemist);
 }
 
@@ -45,7 +49,7 @@ li {
 
 /* Formatting and layout for title name/header */
 h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin-left: 5%;
 }
 
@@ -65,12 +69,19 @@ a:hover {
     color: var(--powder);
 }
 
+nav a {
+    margin: 0.5em;
+}
+
 /* Sets body container colors and flex properties */
 body {
     display: flex;
     flex-wrap: wrap;
-    background-image: url(./background.jpg); /* Image of my dog, George */
+    background-image: url(./background.jpg);
+    /* Image of my dog, George */
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 /* Sets main container layout */
@@ -80,7 +91,8 @@ main {
 }
 
 /* Main container box formatting */
-#aboutme, #newproject {
+#aboutme,
+#newproject {
     margin: 5%;
     background: linear-gradient(var(--astronaut), var(--bay));
     color: var(--junglemist);
@@ -90,7 +102,8 @@ main {
 }
 
 /* Section layout  */
-#aboutme section, #newproject section {
+#aboutme section,
+#newproject section {
     display: flex;
     flex-wrap: nowrap;
     padding: 0.5em 0 0 1em;
@@ -109,7 +122,7 @@ main {
 }
 
 /* Provides spacing for text in main containers */
-.information p{
+.information p {
     margin-bottom: 1em;
     font-size: 1.3em;
 }
@@ -153,7 +166,7 @@ h4 {
     font-size: 1.25em;
     font-style: italic;
     text-shadow: var(--black) 1px 1px;
-    margin-bottom: 0.2em;
+    margin-bottom: 1em;
     background-color: var(--black);
 }
 
@@ -176,9 +189,8 @@ a img {
 }
 
 #profilepic {
-    max-width: 40%;
+    max-width: 30%;
     height: auto;
-    margin-bottom: 20%;
 }
 
 /* Adds border and radius around aside images */
@@ -205,6 +217,10 @@ h6 {
     flex-shrink: 3;
 }
 
+.project p {
+    margin-bottom: 10%;
+}
+
 /* Increases image size of main project image when hovering*/
 #lateimg:hover {
     transform: scale(1.4, 1.4);
@@ -219,7 +235,8 @@ footer {
 }
 
 /* Responsive layout information */
-@media screen and (max-width: 980px) {    
+@media screen and (max-width: 980px) {
+
     /* Realign headers text */
     header {
         justify-content: center;
@@ -231,7 +248,7 @@ footer {
         text-align: center;
         width: auto;
     }
-    
+
     /* Pushes Aside below Main Container */
     main {
         flex-basis: 100%;
@@ -252,26 +269,47 @@ footer {
 
     /* Removes image text */
     h6 {
-        display: none;  
+        display: none;
     }
 
-    /* Reformats list styles */  
+    /* Reformats list styles */
     ul li {
         display: flex;
         flex-direction: column;
         margin: 0.5em 0;
     }
+
+    #profilepic {
+        min-width: 100%;
+    }
 }
 
 /* Responsive layout for under 600px */
 @media screen and (max-width: 600px) {
+
     /* Moves main container pictures above text  */
-    #aboutme section, #newproject section {
+    #aboutme section,
+    #newproject section {
         flex-wrap: wrap;
     }
+
+    /* Fix Header spacing */
+    h1 {
+        margin-bottom: 1rem;
+    }
+
     /* Moves pictures to center */
     .picInfo {
         justify-content: center;
     }
 
+    #profilepic {
+        display: center;
+        min-width: 80%;
+    }
+
+    #lateimg {
+        display: center;
+        min-width: 80%;
+    }
 }
