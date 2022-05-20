@@ -199,7 +199,7 @@ a img {
 .project img {
     max-width: 50%;
     height: auto;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
 }
 
 /* Flex properties for information section */
@@ -220,7 +220,7 @@ h6 {
 }
 
 .project p {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 /* Increases image size of main project image when hovering*/
